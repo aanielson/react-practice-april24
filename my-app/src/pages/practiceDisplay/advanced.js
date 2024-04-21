@@ -22,7 +22,7 @@ const findFactorial = (num) => {
   if (num <= 1) {
     return 1
   } else {
-    return num * findFactorial(num - 1)
+    return num * factorial(num - 1)
   }
 }
 // 5. Implement a function that takes two sorted arrays and merges them into a single sorted array without using any built-in sorting functions.
