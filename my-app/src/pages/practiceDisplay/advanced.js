@@ -15,7 +15,25 @@ const findFactorial = (num) => {}
 // 5. Implement a function that takes two sorted arrays and merges them into a single sorted array without using any built-in sorting functions.
 const combineAndSort = (array1, array2) => {}
 // 6. Write a function that checks if a given string is a palindrome, considering only alphanumeric characters and ignoring case.
-const isPalindrome = () => {}
+const isPalindrome = (string) => {
+  if (
+    string.icludes('0') ||
+    string.icludes('1') ||
+    string.icludes('2') ||
+    string.icludes('3') ||
+    string.icludes('4') ||
+    string.icludes('5') ||
+    string.icludes('6') ||
+    string.icludes('7') ||
+    string.icludes('8') ||
+    string.icludes('9')
+  ) {
+    return 'Must contain exclusively alphanumeric characters'
+  } else {
+    string = string.toLowerCase()
+    return string === string.split('').reverse().join('')
+  }
+}
 // 7. Create a JavaScript class for a linked list with methods to insert a node at the beginning, end, or at a specific position, and to delete a node from a given position.
 
 // 8. Implement a function that flattens a nested array in JavaScript, converting it into a single-level array.
