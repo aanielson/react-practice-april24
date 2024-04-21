@@ -5,15 +5,30 @@ const AdvancedJS = () => {
 }
 
 // 1. Implement a debounce function in JavaScript that limits the frequency of a function’s execution when it’s called repeatedly within a specified time frame.
-const debounce = (time) => {}
+const debounce = (func, delay) => {
+  let timer = setTimeout(func, delay)
+  clearTimeout(timer)
+}
 // 2. Write a function that takes an array of objects and a key, and returns a new array sorted based on the values of that key in ascending order.
-const sortAscending = (array, key) => {}
+const sortAscendingByKey = (array, key) => {
+  return array.sort((a, b) => a[key] - b[key])
+}
 // 3. Implement a deep clone function in JavaScript that creates a copy of a nested object or array without any reference to the original.
-const cloneFunc = () => {}
+const cloneItem = (item) => {
+  return JSON.parse(JSON.stringify(item))
+}
 // 4. Write a recursive function to calculate the factorial of a given number.
-const findFactorial = (num) => {}
+const findFactorial = (num) => {
+  if (num <= 1) {
+    return 1
+  } else {
+    return num * findFactorial(num - 1)
+  }
+}
 // 5. Implement a function that takes two sorted arrays and merges them into a single sorted array without using any built-in sorting functions.
-const combineAndSort = (array1, array2) => {}
+const combineAndSort = (array1, array2) => {
+  return [...array1, ...array2].sort((a, b) => a - b)
+}
 // 6. Write a function that checks if a given string is a palindrome, considering only alphanumeric characters and ignoring case.
 const isPalindrome = (string) => {
   if (
