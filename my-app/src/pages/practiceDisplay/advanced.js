@@ -37,7 +37,15 @@ const isPalindrome = (string) => {
 // 7. Create a JavaScript class for a linked list with methods to insert a node at the beginning, end, or at a specific position, and to delete a node from a given position.
 
 // 8. Implement a function that flattens a nested array in JavaScript, converting it into a single-level array.
-const flattenArray = (nestedArray) => {}
+const flattenArray = (nestedArray) => {
+  const flattenedArray = []
+  for (array in nestedArray) {
+    for (item in array) {
+      flattenedArray.push(array)
+    }
+  }
+  return flattenedArray
+}
 // 9. Write a function that determines if two strings are anagrams of each other
 const isAnagram = (string1, string2) => {}
 // 10. Create a JavaScript function that returns the Fibonacci sequence up to a given number, utilizing memoization for optimized performance.
