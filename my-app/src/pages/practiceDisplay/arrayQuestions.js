@@ -1,10 +1,29 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 const ArrayProblemsJS = () => {
-  return <></>
+  const [arraySum, setArraySum] = useState(0)
+  // 1. Write a function that returns the sum of all numbers in an array.
+  const findSum = (array) => {
+    let sum = 0
+    for (num in array) {
+      sum += num
+    }
+    setArraySum(sum)
+  }
+  return (
+    <>
+      <div class="new-function">
+        <label>Find sum of all numbers in array.</label>
+        <input name="findSum" type="string" />
+        <button type="button" onCLick={findSum()}>
+          Submit
+        </button>
+        <p id="findSumResult">{arraySum}</p>
+      </div>
+    </>
+  )
 }
-// 1. Write a function that returns the sum of all numbers in an array.
-const findSum = (array) => {}
+
 //2. Implement a function that finds the maximum number in an array.
 const findMax = (array) => {}
 //3. Write a function that returns a new array containing only the unique elements from an input array.
