@@ -1,21 +1,30 @@
 import React, { useState } from 'react'
 
-const ArrayProblemsJS = () => {
-  const [arraySum, setArraySum] = useState(0)
-  // 1. Write a function that returns the sum of all numbers in an array.
-  const findSum = (array) => {
+function ArrayProblemsJS() {
+  const [arraySum, setArraySum] = useState([])
+  const [arrayInit, setArrayInit] = useState('')
+  // // 1. Write a function that returns the sum of all numbers in an array.
+  const findSum = (string) => {
+    let stringArray = string.split(' ')
     let sum = 0
-    for (num in array) {
-      sum += num
+    for (let i = 0; i < stringArray.length; i++) {
+      sum = sum + parseInt(stringArray[i], 10)
     }
+    console.log(sum)
     setArraySum(sum)
   }
+
   return (
     <>
-      <div class="new-function">
+      <div className="new-function">
         <label>Find sum of all numbers in array.</label>
-        <input name="findSum" type="string" />
-        <button type="button" onCLick={findSum()}>
+        <input
+          name="findSum"
+          type="aray"
+          value={arrayInit}
+          onChange={(e) => setArrayInit(e.target.value)}
+        />
+        <button type="button" onClick={() => findSum(arrayInit)}>
           Submit
         </button>
         <p id="findSumResult">{arraySum}</p>

@@ -18,13 +18,13 @@ const cloneItem = (item) => {
   return JSON.parse(JSON.stringify(item))
 }
 // 4. Write a recursive function to calculate the factorial of a given number.
-const findFactorial = (num) => {
-  if (num <= 1) {
-    return 1
-  } else {
-    return num * factorial(num - 1)
-  }
-}
+// const findFactorial = (num) => {
+//   if (num <= 1) {
+//     return 1
+//   } else {
+//     return num * factorial(num - 1)
+//   }
+// }
 // 5. Implement a function that takes two sorted arrays and merges them into a single sorted array without using any built-in sorting functions.
 const combineAndSort = (array1, array2) => {
   return [...array1, ...array2].sort((a, b) => a - b)
@@ -54,9 +54,9 @@ const isPalindrome = (string) => {
 // 8. Implement a function that flattens a nested array in JavaScript, converting it into a single-level array.
 const flattenArray = (nestedArray) => {
   const flattenedArray = []
-  for (array in nestedArray) {
-    for (item in array) {
-      flattenedArray.push(array)
+  for (let array in nestedArray) {
+    for (let item in array) {
+      flattenedArray.push(item)
     }
   }
   return flattenedArray
@@ -68,7 +68,7 @@ const isAnagram = (string1, string2) => {
 // 10. Create a JavaScript function that returns the Fibonacci sequence up to a given number, utilizing memoization for optimized performance.
 const findFiboncciWithMemoization = (num) => {
   let memo = [0, 1]
-  for (i = 2; i <= num; i++) {
+  for (let i = 2; i <= num; i++) {
     memo[i] = memo[i - 1] + memo[i - 2]
   }
   return memo

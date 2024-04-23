@@ -11,7 +11,7 @@ const isPalindrome = (string) => {
 //2. Implement a function to reverse a string without using the built-in reverse() method.
 const reverseString = (string) => {
   let reversed = ''
-  for (i = string.length - 1; i >= 0; i--) {
+  for (let i = string.length - 1; i >= 0; i--) {
     reversed.append(string[i])
   }
   return reversed
@@ -20,7 +20,7 @@ const reverseString = (string) => {
 const findLargestAndSmallest = (array) => {
   let largest = 0
   let smallest = largest
-  for (num in array) {
+  for (let num in array) {
     if (num > largest) {
       largest = num
     } else if (num < smallest) {
@@ -39,19 +39,19 @@ const findUnique = (array) => {
   return Array.from(new Set(array))
 }
 //5. Implement a function to find the factorial of a given number.
-const findFactorial = (num) => {
-  if (num === 0 || num === 1) {
-    return 1
-  } else {
-    return num * factorial(num - 1)
-  }
-}
+// const findFactorial = (num) => {
+//   if (num === 0 || num === 1) {
+//     return 1
+//   } else {
+//     return num * factorial(num - 1)
+//   }
+// }
 //6. Write a function that determines if a given number is prime or not.
 const isPrime = (num) => {
   if (num <= 1) {
     return false
   } else {
-    for (i = 2; i < Math.sqrt(num); i++) {
+    for (let i = 2; i < Math.sqrt(num); i++) {
       if (num % i === 0) {
         return false
       }
@@ -62,7 +62,7 @@ const isPrime = (num) => {
 //7. Implement a function to find the sum of all the numbers in an array.
 const findSum = (array) => {
   let sum = 0
-  for (item in array) {
+  for (let item in array) {
     sum += item
   }
   return sum
@@ -70,7 +70,7 @@ const findSum = (array) => {
 //8. Given a string, write a function to count the occurrences of each character in the string.
 const countCharacters = (string) => {
   let characterCount = {}
-  for (letter in string) {
+  for (let letter in string) {
     characterCount[letter] = (characterCount[letter] || 0) + 1
   }
   return characterCount

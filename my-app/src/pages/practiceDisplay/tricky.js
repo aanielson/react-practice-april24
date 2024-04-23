@@ -8,7 +8,7 @@ const TrickyJS = () => {
 const reverseSentence = (string) => {
   let newSentence = ''
   let wordArray = string.split(' ')
-  for (i = wordArray.length - 1; i <= wordArray.length; i--) {
+  for (let i = wordArray.length - 1; i <= wordArray.length; i--) {
     newSentence.append(`${wordArray[i]} `)
   }
   return newSentence
@@ -22,7 +22,7 @@ const isPalindrome = (string) => {
 const largestDiff = (array) => {
   let largest = 0
   let smallest = largest
-  for (int in array) {
+  for (let int in array) {
     if (int > largest) {
       largest = int
     } else if (int < smallest) {
@@ -32,19 +32,19 @@ const largestDiff = (array) => {
   return largest - smallest
 }
 //4. Implement a function that removes duplicates from an array, keeping only the unique elements.
-const removeDuplicates = (array) => {
-  return array.filter((item, index) => {
-    array.indexOf(item) === index
-  })
-}
+// const removeDuplicates = (array) => {
+//   return array.filter((item, index) => {
+//     array.indexOf(item) === index
+//   })
+// }
 //5. Write a function that accepts a number and returns its factorial (e.g., factorial of 5 is 5 x 4 x 3 x 2 x 1).
-const findFactorial = (num) => {
-  if (num <= 1) {
-    return 1
-  } else {
-    return num * factorial(num - 1)
-  }
-}
+// const findFactorial = (num) => {
+//   if (num <= 1) {
+//     return 1
+//   } else {
+//     return num * factorial(num - 1)
+//   }
+// }
 //6. Implement a function that flattens a nested array into a single-dimensional array.
 const flattenArray = (array) => {
   return array.flat()
