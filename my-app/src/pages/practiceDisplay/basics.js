@@ -30,13 +30,13 @@ const returnEvenNumbers = (array) => {
 }
 
 // 6. Write a JavaScript program to calculate the factorial of a given number.
-const findFactorial = (num) => {
-  if (num === 0 || num === 1) {
-    return 1
-  } else {
-    return num * findFactorial(num - 1)
-  }
-}
+// const findFactorial = (num) => {
+//   if (num === 0 || num === 1) {
+//     return 1
+//   } else {
+//     return num * factorial(num - 1)
+//   }
+// }
 
 // 7. Write a JavaScript function to check if a given number is prime.
 const isPrime = (num) => {
@@ -55,8 +55,8 @@ const isPrime = (num) => {
 // 8. Write a JavaScript program to find the largest element in a nested array.
 const findLargestElement = (nestedArray) => {
   let largest = nestedArray[0][0]
-  for (arr of nestedArray) {
-    for (num of arr) {
+  for (let arr of nestedArray) {
+    for (let num of arr) {
       if (num > largest) {
         largest = num
       }

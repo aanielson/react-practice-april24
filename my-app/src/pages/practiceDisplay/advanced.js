@@ -5,15 +5,30 @@ const AdvancedJS = () => {
 }
 
 // 1. Implement a debounce function in JavaScript that limits the frequency of a function’s execution when it’s called repeatedly within a specified time frame.
-const debounce = (time) => {}
+const debounce = (func, delay) => {
+  let timer = setTimeout(func, delay)
+  clearTimeout(timer)
+}
 // 2. Write a function that takes an array of objects and a key, and returns a new array sorted based on the values of that key in ascending order.
-const sortAscending = (array, key) => {}
+const sortAscendingByKey = (array, key) => {
+  return array.sort((a, b) => a[key] - b[key])
+}
 // 3. Implement a deep clone function in JavaScript that creates a copy of a nested object or array without any reference to the original.
-const cloneFunc = () => {}
+const cloneItem = (item) => {
+  return JSON.parse(JSON.stringify(item))
+}
 // 4. Write a recursive function to calculate the factorial of a given number.
-const findFactorial = (num) => {}
+// const findFactorial = (num) => {
+//   if (num <= 1) {
+//     return 1
+//   } else {
+//     return num * factorial(num - 1)
+//   }
+// }
 // 5. Implement a function that takes two sorted arrays and merges them into a single sorted array without using any built-in sorting functions.
-const combineAndSort = (array1, array2) => {}
+const combineAndSort = (array1, array2) => {
+  return [...array1, ...array2].sort((a, b) => a - b)
+}
 // 6. Write a function that checks if a given string is a palindrome, considering only alphanumeric characters and ignoring case.
 const isPalindrome = (string) => {
   if (
@@ -35,19 +50,27 @@ const isPalindrome = (string) => {
   }
 }
 // 7. Create a JavaScript class for a linked list with methods to insert a node at the beginning, end, or at a specific position, and to delete a node from a given position.
-
+// Noway actually not going to do that
 // 8. Implement a function that flattens a nested array in JavaScript, converting it into a single-level array.
 const flattenArray = (nestedArray) => {
   const flattenedArray = []
-  for (array in nestedArray) {
-    for (item in array) {
-      flattenedArray.push(array)
+  for (let array in nestedArray) {
+    for (let item in array) {
+      flattenedArray.push(item)
     }
   }
   return flattenedArray
 }
 // 9. Write a function that determines if two strings are anagrams of each other
-const isAnagram = (string1, string2) => {}
+const isAnagram = (string1, string2) => {
+  return string1.split('').sort().join('') === string2.split('').sort().join('')
+}
 // 10. Create a JavaScript function that returns the Fibonacci sequence up to a given number, utilizing memoization for optimized performance.
-const findFiboncciWithMemoization = (num) => {}
+const findFiboncciWithMemoization = (num) => {
+  let memo = [0, 1]
+  for (let i = 2; i <= num; i++) {
+    memo[i] = memo[i - 1] + memo[i - 2]
+  }
+  return memo
+}
 export default AdvancedJS

@@ -1,6 +1,6 @@
 import logo from './logo.svg'
-import PracticeDisplay from './pages/practice-display'
-import './App.css'
+import PracticeDisplay from './pages/practiceDisplay'
+// import './App.css'
 
 function App() {
   return (
